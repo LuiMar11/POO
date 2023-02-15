@@ -1,9 +1,18 @@
+class Animal {
+  constructor(nombre) {
+    this.nombre = nombre;
+  }
+  toString() {
+    return "Animal" + this.nombre;
+  }
+}
+
 class Gato {
   constructor(nombre) {
     this.nombre = nombre;
   }
-  getNombre() {
-    return this.nombre;
+  toString() {
+    return "Gato: " + this.nombre;
   }
 }
 
@@ -11,16 +20,13 @@ class Perro {
   constructor(nombre) {
     this.nombre = nombre;
   }
-  getNombre() {
-    return this.nombre;
+  toString() {
+    return "Perro: " + this.nombre;
   }
 }
 
-function mostrar(nombre) {
-  return nombre;
-}
 
-let gato = new Gato("Gato");
-let perro = new Perro("Perro");
+let gato = new Gato("Cat");
+let perro = new Perro("Dog");
 
-console.log(mostrar(gato.getNombre() + ", " + mostrar(perro.getNombre())));
+console.log(gato.toString() + ", " + perro.toString());
